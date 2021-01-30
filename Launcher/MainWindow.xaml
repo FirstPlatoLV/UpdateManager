@@ -1,0 +1,19 @@
+﻿<Window x:Class="Launcher.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Launcher"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        Title="MainWindow" Height="150" Width="300" Background="#FF1B1A1A" ResizeMode="NoResize">
+    <Grid>
+        <Label Width="200" Height="30" Foreground="WhiteSmoke" HorizontalContentAlignment="Center" Content="{Binding Path=StatusText, 
+                                UpdateSourceTrigger=PropertyChanged, 
+                                Mode=OneWay}" Margin="50,42,50,78"></Label>
+        <ProgressBar Height="10" Width="200" Value="{Binding Path=DownloadProgressValue, 
+                                UpdateSourceTrigger=PropertyChanged, 
+                                Mode=OneWay}" Foreground="DimGray" Minimum="0" Maximum="100" Margin="50,77,50,63"/>
+    </Grid>
+</Window>
